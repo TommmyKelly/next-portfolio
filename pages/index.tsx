@@ -4,19 +4,21 @@ import Link from 'next/link';
 
  const Index = () => {
   return (
-    <div className={styles.bg_color}>
+    <>
       <Head>
         <title>Homepage</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      
-
-      <main className={styles.text_color}>
-       <Link href="/about">
+    <div className={ styles.container }>
+      <div className={styles.height}>
+        <main className={styles.text_color}>
+          <Link href="/about">
           <h2>Hello there</h2>
-        </Link>
-      </main>
+          </Link>
+        </main>
+      </div>
     </div>
+    </>
   );
 }
 

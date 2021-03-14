@@ -3,6 +3,14 @@
 @import "media.queries";
 
 //Global Styles
-.container__height{
+.container{
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
+
+.height{
+  flex: 1;
+  background: $bg-color;
+}
+
