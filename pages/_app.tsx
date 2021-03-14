@@ -1,8 +1,8 @@
-import "../styles/globals.css";
+import "../styles/globals.scss";
 import { AppProps } from "next/app";
 import Head from "next/head";
 
-function MyApp({ Component, pageProps }: AppProps) {
+const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>
