@@ -16,10 +16,6 @@ import Link from 'next/link'
         </Link>
       
       </main>
-
-      <footer className={styles.footer}>
-    
-      </footer>
     </div>
   );
 }

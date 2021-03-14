@@ -2,9 +2,10 @@ import "../styles/globals.scss";
 import { AppProps } from "next/app";
 import Head from "next/head";
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
+const App = ({ Component, pageProps }: AppProps) => {
   return (
-    <>
+    <div className="app__global">
+      <div className="app__container">
       <Head>
         <link
           rel='stylesheet'
@@ -13,10 +14,20 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           crossOrigin='anonymous'
         />
       </Head>
+      <main className="app__main">
+        <header className="app__header home">
+          <nav >
 
+          </nav>
+        </header>
       <Component {...pageProps} />
-    </>
+        <footer className="app__footer home">
+
+        </footer>
+      </main>
+      </div>
+    </div>
   );
 }
 
-export default MyApp;
+export default App;

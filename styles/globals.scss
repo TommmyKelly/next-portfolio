@@ -12,6 +12,30 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
+.app__global{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: red;
+}
+
+.app__container{
+  flex: 1;
+  background: yellow;
+}
+
+.app__header{
+  height: 4rem;
+  width: 100%;
+  background: blue;
+}
+
+.app__footer{
+  height: 4rem;
+  width: 100%;
+  background: blue;
+}
+
 
 
 

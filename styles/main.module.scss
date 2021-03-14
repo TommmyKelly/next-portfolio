@@ -1,3 +1,8 @@
 @import "variables";
 @import "utilities";
+@import "media.queries";
 
+//Global Styles
+.container__height{
+  height: 100%;
+}

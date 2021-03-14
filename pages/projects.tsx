@@ -4,22 +4,19 @@ import Link from 'next/link'
 
  const Projects = () => {
   return (
-    <div className={styles.bg_color}>
+    <div className={`${ styles.bg_color }${styles.main_height}`}>
       <Head>
         <title>My Projects</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <main className={styles.text_color}>
+      <main className={ styles.text_color }>
         <Link href="/">
           <h2>Hello there</h2>
         </Link>
       
       </main>
 
-      <footer className={styles.footer}>
-    
-      </footer>
     </div>
   );
 }
