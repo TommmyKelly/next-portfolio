@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import "variables";
 
 * {
   box-sizing: border-box;
@@ -21,17 +22,50 @@ body {
   flex: 1;
 }
 
-.app__header{
-  height: 4rem;
-  width: 100%;
+.header{
+  display: flex;
+  flex-direction: column;
   background: blue;
-}
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  }
 
-.app__footer{
+.header__container{
+  flex: 1;
+  }
+
+  .header__nav{
+  height: 100%;
+  
+  ul{
+    height: 100%;
+    display: flex;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 3rem;
+  }
+
+  li > a{
+    color: $color-primary;
+    text-decoration: none;
+    margin-left: 2rem;
+  }
+
+.active{
+  text-decoration: underline;
+  }
+ }
+
+.footer{
   height: 4rem;
-  width: 100%;
+  display: flex;
   background: blue;
-}
+ }
 
 
 

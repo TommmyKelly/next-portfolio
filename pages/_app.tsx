@@ -1,6 +1,8 @@
 import "../styles/globals.scss";
 import { AppProps } from "next/app";
 import Head from "next/head";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
@@ -15,16 +17,10 @@ const App = ({ Component, pageProps }: AppProps) => {
       </Head>
     <div className="app__global">
       <div className="app__container">
-        <header className="app__header home">
-          <nav >
-
-          </nav>
-        </header>
-       <Component {...pageProps} />
+        <Header />
+            <Component {...pageProps} />   
       </div>
-        <footer className="app__footer home">
-
-        </footer>
+        <Footer />
     </div>
     </>
   );
