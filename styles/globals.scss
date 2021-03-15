@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
-@import "variables";
 @import "queries";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@import "variables";
 
 * {
   box-sizing: border-box;
@@ -10,21 +10,15 @@
 
 html,
 body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
 }
 
-.app__global{
+.app__global {
   height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-.app__container{
+.app__container {
   flex: 1;
 }
-
-
-
-
-
-

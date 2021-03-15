@@ -1,18 +1,25 @@
+@import "queries";
 @import "variables";
 @import "utilities";
-@import "queries";
 
 //Global Styles
-.container{
+.container {
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.height{
+.height {
   flex: 1;
   background: $bg-color;
 }
 
-
-
+.color {
+  color: purple;
+  @include mq(600px) {
+    color: red;
+  }
+  @include mq(500px) {
+    color: green;
+  }
+}
