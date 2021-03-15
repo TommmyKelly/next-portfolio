@@ -1,6 +1,6 @@
 @import "variables";
 @import "utilities";
-@import "media_queries";
+@import "queries";
 
 //Global Styles
 .container{
@@ -13,4 +13,6 @@
   flex: 1;
   background: $bg-color;
 }
+
+
 

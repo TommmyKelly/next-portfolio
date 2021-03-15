@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import styles from "../styles/components.module.scss";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -13,42 +14,42 @@ const Header = () => {
   }
 
   return (
-    <div className="header">
-      <section className={buttonState ? "header__container hidden" : "header__container"}>
-          <nav className="header__nav">
+    <div className={styles.header}>
+      <section className={buttonState ? styles.header__containerHidden : styles.header__container}>
+          <nav className={styles.header__nav}>
             <ul>
-              <li className={router.pathname == "/" ? "active" : ""}>
+              <li className={router.pathname == "/" ? styles.active : ""}>
                 <Link
                   href="/"
                   >
                   <a onClick={showMobileMenu}>Home</a>
                 </Link>
               </li>
-              <li className={router.pathname == "/about" ? "active" : ""}>
+              <li className={router.pathname == "/about" ? styles.active : ""}>
                 <Link
                   href="/about">
                   <a onClick={showMobileMenu}>About</a>
                 </Link>
               </li>
-              <li className={router.pathname == "/education" ? "active" : ""}>
+              <li className={router.pathname == "/education" ? styles.active : ""}>
                 <Link
                 href="/education">
                 <a onClick={showMobileMenu}>Education</a>
                 </Link>
               </li>
-              <li className={router.pathname == "/projects" ? "active" : ""}>
+              <li className={router.pathname == "/projects" ? styles.active : ""}>
                 <Link
                 href="/projects">
                 <a onClick={showMobileMenu}>Projects</a>
                 </Link>
               </li>
-              <li className={router.pathname == "/skills" ? "active" : ""}>
+              <li className={router.pathname == "/skills" ? styles.active : ""}>
                 <Link
                   href="/skills">
                   <a onClick={showMobileMenu}>Skills</a>
                 </Link>
               </li>
-              <li className={router.pathname == "/contact" ? "active" : ""}>
+              <li className={router.pathname == "/contact" ? styles.active : ""}>
                 <Link 
                   href="/contact">
                   <a onClick={showMobileMenu}>Contact</a>
@@ -58,7 +59,7 @@ const Header = () => {
           </nav>
         </section>
       <section
-        className="header__menu"
+        className={styles.header__menu}
         onClick={() => setButtonState(!buttonState)}>
         {
           buttonState ? (
