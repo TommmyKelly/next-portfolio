@@ -17,22 +17,7 @@ import Link from 'next/link';
           <h2>Hello there</h2>
             </Link>
             <img src="/vercel.svg" width="800px" alt="pic"/>
-            <img src="/vercel.svg" width="800px" alt="pic"/>
-            <img src="/vercel.svg" width="800px" alt="pic"/>
-            <img src="/vercel.svg" width="800px" alt="pic"/>
-            <img src="/vercel.svg" width="800px" alt="pic"/>
-            <img src="/vercel.svg" width="800px" alt="pic"/>
-            <img src="/vercel.svg" width="800px" alt="pic"/>
-            <img src="/vercel.svg" width="800px" alt="pic"/>
-            <img src="/vercel.svg" width="800px" alt="pic"/>
-            <img src="/vercel.svg" width="800px" alt="pic"/>
-            <img src="/vercel.svg" width="800px" alt="pic"/>
-            <img src="/vercel.svg" width="800px" alt="pic"/>
-            <img src="/vercel.svg" width="800px" alt="pic"/>
-            <img src="/vercel.svg" width="800px" alt="pic"/>
-            <img src="/vercel.svg" width="800px" alt="pic"/>
-            <img src="/vercel.svg" width="800px" alt="pic"/>
-            <img src="/vercel.svg" width="800px" alt="pic"/>
+     
         </main>
       </div>
     </div>

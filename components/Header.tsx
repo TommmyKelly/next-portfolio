@@ -14,14 +14,12 @@ const Header = () => {
 
   return (
     <div className="header">
-      <div>
       <section className={buttonState ? "header__container hidden" : "header__container"}>
           <nav className="header__nav">
             <ul>
               <li className={router.pathname == "/" ? "active" : ""}>
                 <Link
                   href="/"
-                passHref
                   >
                   <a onClick={showMobileMenu}>Home</a>
                 </Link>
@@ -29,37 +27,36 @@ const Header = () => {
               <li className={router.pathname == "/about" ? "active" : ""}>
                 <Link
                   href="/about">
-                  <a>About</a>
+                  <a onClick={showMobileMenu}>About</a>
                 </Link>
               </li>
               <li className={router.pathname == "/education" ? "active" : ""}>
                 <Link
                 href="/education">
-                Education
+                <a onClick={showMobileMenu}>Education</a>
                 </Link>
               </li>
               <li className={router.pathname == "/projects" ? "active" : ""}>
                 <Link
                 href="/projects">
-                Projects
+                <a onClick={showMobileMenu}>Projects</a>
                 </Link>
               </li>
               <li className={router.pathname == "/skills" ? "active" : ""}>
                 <Link
                   href="/skills">
-                  Skills
+                  <a onClick={showMobileMenu}>Skills</a>
                 </Link>
               </li>
               <li className={router.pathname == "/contact" ? "active" : ""}>
                 <Link 
                   href="/contact">
-                  Contact
+                  <a onClick={showMobileMenu}>Contact</a>
                 </Link> 
               </li>
             </ul>
           </nav>
         </section>
-        </div>
       <section
         className="header__menu"
         onClick={() => setButtonState(!buttonState)}>
