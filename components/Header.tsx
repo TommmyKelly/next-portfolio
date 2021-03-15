@@ -1,21 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Link from "next/link";
 import { useRouter } from "next/router";
 
 const Header = () => {
-const router = useRouter() 
+  const router = useRouter()
+  const [buttonState, setButtonState] = useState(true)
+
+  const showMobileMenu = () => {
+    if (innerWidth <= 768) {
+      setButtonState(true)
+    }
+  }
 
   return (
     <div className="header">
-      <header className="header__container home">
+      <div>
+      <section className={buttonState ? "header__container hidden" : "header__container"}>
           <nav className="header__nav">
             <ul>
               <li className={router.pathname == "/" ? "active" : ""}>
                 <Link
                   href="/"
-                  passHref
+                passHref
                   >
-                  <a>Home</a>
+                  <a onClick={showMobileMenu}>Home</a>
                 </Link>
               </li>
               <li className={router.pathname == "/about" ? "active" : ""}>
@@ -50,7 +58,19 @@ const router = useRouter()
               </li>
             </ul>
           </nav>
-        </header>
+        </section>
+        </div>
+      <section
+        className="header__menu"
+        onClick={() => setButtonState(!buttonState)}>
+        {
+          buttonState ? (
+            <i className="fas fa-bars"></i>
+          ) : (
+            <i className="fas fa-times"></i>
+          )
+        }
+        </section>
     </div>
   )
 }

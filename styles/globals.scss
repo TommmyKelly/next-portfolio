@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 @import "variables";
+@import "media.queries";
 
 * {
   box-sizing: border-box;
@@ -24,7 +25,6 @@ body {
 
 .header{
   display: flex;
-  flex-direction: column;
   background: blue;
   position: fixed;
   top: 0;
@@ -59,6 +59,19 @@ body {
 .active{
   text-decoration: underline;
   }
+ }
+
+ .header__menu{
+  margin-right: 1rem;
+  height: 100%;
+  width: 4rem;
+  display: none;
+  
+  .fas{
+   color: $color-primary;
+   font-size: 2rem;
+   cursor: pointer;
+ }
  }
 
 .footer{
