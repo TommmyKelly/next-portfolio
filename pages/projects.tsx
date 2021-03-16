@@ -2,7 +2,7 @@ import Head from "next/head";
 import styles from "../styles/main.module.scss";
 import { GetStaticProps, GetStaticPaths, GetServerSideProps } from "next";
 import Link from "next/link";
-import React, { ReactNode } from "react";
+import React from "react";
 import Project from "../components/Project";
 
 interface Props {
