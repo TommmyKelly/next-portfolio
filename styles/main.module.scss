@@ -1,6 +1,8 @@
 @import "queries";
 @import "variables";
 @import "utilities";
+@import "queries";
+@import "mixins";
 
 //Global Styles
 .container {
@@ -14,12 +16,17 @@
   background: $bg-color;
 }
 
-.color {
-  color: purple;
-  @include mq(600px) {
-    color: red;
-  }
-  @include mq(500px) {
-    color: green;
-  }
+.projectCard {
+  margin-top: 4rem;
+  max-width: 1000px;
+  @include grid-3;
+}
+
+.card {
+  text-align: center;
+  cursor: pointer;
+  border-radius: 18px;
+  border: 1px solid $color-primary;
+  padding: 20px;
+  color: $color-primary;
 }
