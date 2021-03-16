@@ -47,13 +47,25 @@
 .project__container {
   padding: 1rem;
   height: 80vh;
-  @include dflex-center;
+  display: flex;
+  align-items: center;
   margin-top: 60px;
+  @include mq(600px) {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 .project__left {
+  @include dflex-center;
   margin-right: 20px;
+  flex: 0.4;
 }
 
-.right {
+.project__right {
+  margin-left: auto;
+  flex: 0.8;
+  @include mq(600px) {
+    margin-top: 1rem;
+  }
 }
