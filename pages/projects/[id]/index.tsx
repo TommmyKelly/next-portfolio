@@ -1,4 +1,5 @@
 import Link from "next/link";
+import styles from "../../../styles/main.module.scss";
 import {
   GetStaticProps,
   GetStaticPaths,
@@ -11,15 +12,23 @@ interface Props {
   project: {
     id: number;
     title: string;
-    excerpt: string;
+    body: string;
   };
 }
 
 const article: React.FC<Props> = ({ project }) => {
   return (
     <>
-      <h1>{project.title}</h1>
-      <p>{project.excerpt}</p>
+      <div className={styles.project__container}>
+        <div className={styles.project__left}>
+          <img src='/vercel.svg' width='200px' alt='pic' />
+        </div>
+        <div className={styles.project__right}>
+          <h1>{project.title}</h1>
+          <p>{project.body}</p>
+        </div>
+      </div>
+
       <br />
       <Link href='/'>Go Back</Link>
     </>
