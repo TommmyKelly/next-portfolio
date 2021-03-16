@@ -2,11 +2,14 @@ import Head from "next/head";
 import styles from "../styles/main.module.scss";
 import { GetStaticProps, GetStaticPaths, GetServerSideProps } from "next";
 import Link from "next/link";
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 import Project from "../components/Project";
 
-const Projects = ({ projects }: any) => {
-  console.log(projects);
+interface Props {
+  projects: [];
+}
+
+const Projects: React.FC<Props> = ({ projects }: Props) => {
   return (
     <>
       <Head>
@@ -21,8 +24,8 @@ const Projects = ({ projects }: any) => {
             </Link>
           </main>
           <section className={styles.projectCard}>
-            {projects.map((project: ChildNode) => (
-              <Project project={project} />
+            {projects.map((project: any) => (
+              <Project key={project.id} project={project} />
             ))}
           </section>
         </div>

@@ -2,9 +2,11 @@ import React from "react";
 import styles from "../styles/main.module.scss";
 
 interface Props {
-  id: string;
-  excerpt: string;
-  body: string;
+  project: {
+    id: number;
+    title: string;
+    excerpt: string;
+  };
 }
 
 const Project: React.FC<Props> = ({ project }) => {
