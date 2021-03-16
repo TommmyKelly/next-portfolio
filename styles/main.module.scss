@@ -42,6 +42,17 @@
   border: 1px solid $color-primary;
   padding: 20px;
   color: $color-primary;
+  transition: transform 0.3s ease-in;
+  filter: none;
+  -webkit-filter: blur(0);
+  -moz-filter: blur(0);
+  -ms-filter: blur(0);
+
+  &:hover {
+    color: $color-tertiary;
+    border: 1px solid $color-tertiary;
+    transform: scale(1.05);
+  }
 }
 
 .project__container {
