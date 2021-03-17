@@ -2,7 +2,6 @@
 @import "variables";
 @import "utilities";
 
-
 .header{
   display: flex;
   background: blue;
@@ -12,6 +11,17 @@
   width: 100vw;
   height: 4rem;
   }
+
+  .header__index{
+     display: flex;
+     background: blue;
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100vw;
+     height: 4rem;
+     }
+
 
 .header__container{
   flex: 1;
@@ -52,7 +62,7 @@
   height: 100%;
   width: 1.6rem;
   display: none;
-  
+   
   i{
    color: $color-primary;
    font-size: 2rem;
@@ -70,6 +80,7 @@
  @media(max-width: 768px){
   .header__menu{
     position: absolute;
+    z-index: 20;
     top: 0;
     right: 0.6rem;
     display: grid;
@@ -105,14 +116,12 @@
 }
 
 @media(max-width: 375px){
-  .header{
+  .header__index{
     background: transparent;
+    position: fixed;
+    z-index: 20;
   }
   
-
-   .index__image{
-  }
-
   .footer{
     display: none;
   }

@@ -14,7 +14,7 @@ const Header = () => {
   }
 
   return (
-    <div className={styles.header}>
+    <div className={router.pathname == "/" ? styles.header__index : styles.header}>
       <section className={buttonState ? styles.header__containerHidden : styles.header__container}>
           <nav className={styles.header__nav}>
             <ul>
