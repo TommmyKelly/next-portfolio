@@ -25,6 +25,12 @@
   outline: none;
 }
 
+@mixin grid-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+}
+
 @mixin grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
