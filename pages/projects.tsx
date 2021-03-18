@@ -4,6 +4,7 @@ import styles from "../styles/main.module.scss";
 import { GetStaticProps, GetStaticPaths, GetServerSideProps } from "next";
 import Link from "next/link";
 import React from "react";
+import { projects } from "../projects";
 import Project from "../components/Project";
 
 
@@ -40,9 +41,6 @@ const Projects: React.FC<Props> = ({ projects }: Props) => {
 export default Projects;
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const res = await fetch("http://localhost:3000/api/projects");
-  const projects = await res.json();
-
   return {
     props: {
       projects,
