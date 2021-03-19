@@ -3,3 +3,9 @@
     @content;
   }
 }
+
+@mixin hmq($size) {
+  @media (max-height: $size){
+    @content;
+  }
+}

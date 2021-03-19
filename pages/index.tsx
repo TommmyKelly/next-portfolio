@@ -13,8 +13,7 @@ import { useRouter } from "next/router";
         <title>Homepage</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <div className={styles.container}>
-          <img className={styles.background__image} src="https://images.unsplash.com/photo-1604488382778-ff54757c0f42?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDExMHxibzhqUUtUYUUwWXx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt=""/>       
+      <div className={styles.container__index}>
        <div className={router.pathname == "/" ? styles.index__height : styles.height}>
         <figure className={styles.index__main}>
           <img className={styles.index__profile} src="/sven.JPG" alt=""/>
