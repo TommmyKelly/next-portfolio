@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "../../../styles/main.module.scss";
+import { projects } from "../../../projects";
 import {
   GetStaticProps,
   GetStaticPaths,
@@ -36,28 +37,19 @@ const article: React.FC<Props> = ({ project }) => {
 };
 
 //getServerSideProps()
-export const getStaticProps: GetStaticProps = async (context: any) => {
-  const res = await fetch(
-    `http://localhost:3000/api/projects/${context.params.id}`
-  );
-
-  const project = await res.json();
-
+export const getStaticProps: GetStaticProps = async (context) => {
+  const project = projects.filter((art) => art.id === context.params?.id);
   return {
     props: {
-      project,
+      project: project[0],
     },
   };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const res = await fetch("http://localhost:3000/api/projects");
+  const ids = projects.map((project) => project.id);
 
-  const projects = await res.json();
-
-  const ids = projects.map((project: any) => project.id);
-
-  const paths = ids.map((id: number) => ({
+  const paths = ids.map((id) => ({
     params: {
       id: id.toString(),
     },
