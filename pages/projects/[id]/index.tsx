@@ -37,8 +37,8 @@ const article: React.FC<Props> = ({ project }) => {
 };
 
 //getServerSideProps()
-export const getStaticProps: GetStaticProps = async (context: any) => {
-  const project = projects.filter((art) => art.id === context.params.id);
+export const getStaticProps: GetStaticProps = async (context) => {
+  const project = projects.filter((art) => art.id === context.params?.id);
   return {
     props: {
       project: project[0],
