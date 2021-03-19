@@ -14,28 +14,7 @@ const Header = () => {
   };
 
   return (
-<<<<<<< HEAD
-    <div className={router.pathname == "/" ? styles.header : styles.header__index}>
-      <section className={buttonState ? styles.header__containerHidden : styles.header__container}>
-          <nav className={styles.header__nav}>
-            <ul>
-              <li className={router.pathname == "/" ? styles.active : ""}>
-                <Link
-                  href="/"
-                  >
-                  <a onClick={showMobileMenu}>Home</a>
-                </Link>
-              </li>
-              <li className={router.pathname == "/about" ? styles.active : ""}>
-                <Link
-                  href="/about">
-                  <a onClick={showMobileMenu}>About</a>
-                </Link>
-              </li>
-              <li className={router.pathname == "/education" ? styles.active : ""}>
-                <Link
-                href="/education">
-=======
+
     <div
       className={router.pathname == "/" ? styles.header__index : styles.header}
     >
@@ -62,7 +41,7 @@ const Header = () => {
               className={router.pathname == "/education" ? styles.active : ""}
             >
               <Link href='/education'>
->>>>>>> 1c292ba871eeb4e0889f1c711528858bf236af7e
+
                 <a onClick={showMobileMenu}>Education</a>
               </Link>
             </li>

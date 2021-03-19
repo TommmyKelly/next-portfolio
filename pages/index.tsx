@@ -16,7 +16,7 @@ const Index = () => {
         <title>Homepage</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-<<<<<<< HEAD
+
       <div className={styles.container__index}>
        <div className={router.pathname == "/" ? styles.index__height : styles.height}>
         <figure className={styles.index__main}>
@@ -45,8 +45,8 @@ const Index = () => {
           <i className="fab fa-bootstrap"></i>
           <i className="fab fa-node"></i>
         </section>
-=======
-      <div className={styles.container}>
+
+       <div className={styles.container}>
         <img
           className={styles.background__image}
           src='https://images.unsplash.com/photo-1604488382778-ff54757c0f42?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDExMHxibzhqUUtUYUUwWXx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
@@ -86,8 +86,10 @@ const Index = () => {
             <i className='fab fa-node'></i>
           </section>
         </div>
->>>>>>> 1c292ba871eeb4e0889f1c711528858bf236af7e
-      </div>
+    </div>
+    </div>
+    </div>
+  
     </>
   );
 };
