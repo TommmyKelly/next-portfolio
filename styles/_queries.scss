@@ -4,8 +4,20 @@
   }
 }
 
-@mixin hmq($size) {
-  @media (max-height: $size){
-    @content;
+@mixin wmq($size){
+  @media(min-width: $size){
+    @content
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+

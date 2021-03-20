@@ -22,15 +22,10 @@
      left: 0;
      width: 100vw;
      height: 4rem;
-
-     @include hmq(375px){
-     position: fixed;
-     z-index: 20;
-     }
    }
 
 .header__containerHidden {
-  @include mq(768px){
+  @include mq(812px){
  display: none;
  background: transparent;
   }
@@ -42,7 +37,7 @@
   width: 100vw;
   background: transparent;
 
-  @include mq(768px){
+  @include mq(812px){
     position: absolute;
     top: 0;
     left: 0;
@@ -70,7 +65,7 @@
     align-items: center;
     margin-right: 3rem;
 
-    @include mq(768px){
+    @include mq(812px){
       display: flex;
       flex-direction: column;
     }
@@ -82,7 +77,7 @@
     text-decoration: none;
     margin-left: 2rem;
 
-      @include mq(768px) {
+      @include mq(812px) {
         display: flex;
         justify-content: center;
         padding: 0.4rem 0.2rem;
@@ -107,7 +102,7 @@
    cursor: pointer;
  }
 
- @include mq(768px){
+ @include mq(812px){
    position: absolute;
    z-index: 20;
    top: 0;
@@ -118,11 +113,11 @@
 
 .footer{
   height: 4rem;
-  display: flex;
+  display: none;
   background: #333;
 
-  @include hmq(414px){
-    display: none;
-  }
+  // @include hmq(414px){
+  //   display: none;
+  // }
  }
 
