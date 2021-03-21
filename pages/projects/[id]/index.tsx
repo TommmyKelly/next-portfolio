@@ -21,17 +21,25 @@ const article: React.FC<Props> = ({ project }) => {
   return (
     <>
       <div className={styles.project__container}>
-        <div className={styles.project__left}>
-          <img src='/vercel.svg' width='200px' alt='pic' />
+        <div className={styles.project__topSection}>
+          <div className={styles.project__left}>
+            <img src='/vercel.svg' width='200px' alt='pic' />
+          </div>
+          <div className={styles.project__right}>
+            <h1>{project.title}</h1>
+            <p>{project.body}</p>
+          </div>
         </div>
-        <div className={styles.project__right}>
-          <h1>{project.title}</h1>
-          <p>{project.body}</p>
+
+        <div className={styles.project__buttonContainer}>
+          <div className={styles.project__button}>
+            <Link href='/'>Home</Link>
+          </div>
+          <div className={styles.project__button}>
+            <Link href='/'>Live Site</Link>
+          </div>
         </div>
       </div>
-
-      <br />
-      <Link href='/'>Go Back</Link>
     </>
   );
 };
