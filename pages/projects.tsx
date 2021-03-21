@@ -7,12 +7,15 @@ import React from "react";
 import { projects } from "../projects";
 import Project from "../components/Project";
 
-
 interface Props {
-  projects: [];
+  projects: {
+    id: number;
+    title: string;
+    body: string;
+  }[];
 }
 
-const Projects: React.FC<Props> = ({ projects }: Props) => {
+const Projects: React.FC<Props> = ({ projects }) => {
   return (
     <>
       <Head>
@@ -25,12 +28,11 @@ const Projects: React.FC<Props> = ({ projects }: Props) => {
            
           </main>
           <section className={styles.projectCard}>
-            {projects.map((project: any) => (
+            {projects.map((project) => (
               <Project key={project.id} project={project} />
             ))}
           </section>
         </div>
-
       </div>
     </>
   );
