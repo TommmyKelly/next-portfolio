@@ -3,3 +3,21 @@
     @content;
   }
 }
+
+@mixin wmq($size){
+  @media(min-width: $size){
+    @content
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

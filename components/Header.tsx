@@ -14,6 +14,7 @@ const Header = () => {
   };
 
   return (
+
     <div
       className={router.pathname == "/" ? styles.header__index : styles.header}
     >
@@ -40,6 +41,7 @@ const Header = () => {
               className={router.pathname == "/education" ? styles.active : ""}
             >
               <Link href='/education'>
+
                 <a onClick={showMobileMenu}>Education</a>
               </Link>
             </li>

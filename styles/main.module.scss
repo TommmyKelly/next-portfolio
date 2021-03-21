@@ -1,4 +1,3 @@
-@import "queries";
 @import "variables";
 @import "utilities";
 @import "queries";
@@ -9,6 +8,16 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.container__index{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: url(https://images.unsplash.com/photo-1502847427791-d0194ec4cff4?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NzR8fGJsYWNrfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .height {
@@ -104,6 +113,11 @@
   background: #fff;
   display: flex;
   align-self: center;
+
+  @include wmq(768px){
+    width: 10rem;
+    height: 10rem;
+  }
 }
 
 .index__info{
@@ -121,6 +135,15 @@
   p{
     color: #d6d6d6;
   }
+
+  @include wmq(768px){
+    font-size: 2rem;
+
+    span{
+      font-size: 3rem;
+    }
+  }
+  
 }
 
 .index__skills{
@@ -133,6 +156,10 @@
     color: #5c5c5c;
     font-size: 2rem;
     border-radius: 20px;
+
+    @include wmq(768px){
+      font-size: 3.5rem;
+    }
   }
 }
 
@@ -146,6 +173,10 @@
     color: $color-primary;
     font-size: 2rem;
     border-radius: 20px;
+
+    @include wmq(768px){
+      font-size: 3.5rem;
+    }
   }
 
   a > i:hover{

@@ -1,10 +1,12 @@
-
 @import "variables";
 @import "utilities";
+@import "queries";
+@import "mixins";
+
 
 .header{
   display: flex;
-  background: blue;
+  background: transparent;
   position: fixed;
   top: 0;
   left: 0;
@@ -14,18 +16,37 @@
 
   .header__index{
      display: flex;
-     background: blue;
+     background: transparent;
      position: fixed;
      top: 0;
      left: 0;
      width: 100vw;
      height: 4rem;
-     }
+   }
 
-
+.header__containerHidden {
+  @include mq(812px){
+ display: none;
+ background: transparent;
+  }
+ 
+}
+     
 .header__container{
   flex: 1;
   width: 100vw;
+  background: transparent;
+
+  @include mq(812px){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    text-align: center;
+    display: block;
+    background: #333;
+  }
   }
 
   .header__nav{
@@ -43,6 +64,11 @@
     justify-content: flex-end;
     align-items: center;
     margin-right: 3rem;
+
+    @include mq(812px){
+      display: flex;
+      flex-direction: column;
+    }
   }
 
 
@@ -50,6 +76,13 @@
     color: $color-primary;
     text-decoration: none;
     margin-left: 2rem;
+
+      @include mq(812px) {
+        display: flex;
+        justify-content: center;
+        padding: 0.4rem 0.2rem;
+        color: $color-primary;
+      }
   }
 
 .active{
@@ -68,61 +101,23 @@
    font-size: 2rem;
    cursor: pointer;
  }
+
+ @include mq(812px){
+   position: absolute;
+   z-index: 20;
+   top: 0;
+   right: 0.6rem;
+   @include dflex-center;
+ }
  }
 
 .footer{
   height: 4rem;
-  display: flex;
-  background: blue;
+  display: none;
+  background: #333;
+
+  // @include hmq(414px){
+  //   display: none;
+  // }
  }
 
- //Media Queries Portrait view
- @media(max-width: 768px){
-  .header__menu{
-    position: absolute;
-    z-index: 20;
-    top: 0;
-    right: 0.6rem;
-    display: grid;
-    place-items: center;
-  }
-
-  .header__nav a{
-    display: flex;
-    justify-content: center;
-    padding: 0.4rem 0.2rem;
-    color: yellow;
-  }
-
-  .header__container{
-    position: absolute;
-    top: 4rem;
-    left: 0;
-    width: 100%;
-    z-index: 20;
-    text-align: center;
-    display: block;
-    background: #333;
-  }
-
-  .header__containerHidden{
-    display: none;
-  }
-
-  .header__nav ul{
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-@media(max-width: 375px){
-  .header__index{
-    background: transparent;
-    position: fixed;
-    z-index: 20;
-  }
-  
-  .footer{
-    display: none;
-  }
-}
