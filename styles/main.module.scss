@@ -132,7 +132,7 @@
   display: flex;
   align-self: center;
 
-  @include wmq(768px){
+  @include wmq(813px){
     width: 10rem;
     height: 10rem;
   }
@@ -154,7 +154,7 @@
     color: #d6d6d6;
   }
 
-  @include wmq(768px){
+  @include wmq(813px){
     font-size: 2rem;
 
     span{
@@ -175,7 +175,7 @@
     font-size: 2rem;
     border-radius: 20px;
 
-    @include wmq(768px){
+    @include wmq(813px){
       font-size: 3.5rem;
     }
   }
@@ -192,7 +192,7 @@
     font-size: 2rem;
     border-radius: 20px;
 
-    @include wmq(768px){
+    @include wmq(813px){
       font-size: 3.5rem;
     }
   }
