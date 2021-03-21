@@ -2,22 +2,20 @@ import Head from "next/head";
 import styles from "../styles/main.module.scss";
 // import Link from 'next/link'
 
- const Education = () => {
+const Education = () => {
   return (
-   <>
+    <>
       <Head>
-        <title>Education | Workexperience</title>
+        <title>Education | Work Experience</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-    <div className={ styles.education__container }>
-      <div className={styles.height}>
-        <main>
-          
-        </main>
+      <div className={styles.education__container}>
+        <div className={styles.height}>
+          <main></main>
+        </div>
       </div>
-    </div>
-   </>
+    </>
   );
-}
+};
 
-export default Education
+export default Education;
