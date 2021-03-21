@@ -3,12 +3,32 @@
 @import "queries";
 @import "mixins";
 
+
+
 //Global Styles
-.container {
+.contact__container {
   height: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+.contact__main{
+  flex: 0.5;
+  display: grid;
+  place-items: center;
+}
+
+.contact__form{
+  display: block;
+}
+
+.contact__image{
+  flex: 0.5;
+  display: grid;
+  place-items: center;
+}
+
 
 .container__index{
   height: 100%;
@@ -20,13 +40,11 @@
   background-position: center;
 }
 
-.height {
-  flex: 1;
-  background: $bg-color;
-}
+
 
 .index__height{
   flex: 1;
+  
 }
 
 .projectCard {
@@ -185,3 +203,30 @@
     transform: scale(1.1);
   }
 }
+
+.contact__main {
+  position: relative;
+}
+
+// .contact__main img{
+
+//   position: absolute;
+//   height: 500px;
+//  top: 50%;
+//  left:50%;
+//  transform: translate(-5%, 50%);
+
+  
+
+  // height: 100%;
+  // width: 100%;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // background-image: url('../public/emaillogo.png');
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  
+// }
+

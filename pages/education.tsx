@@ -9,9 +9,9 @@ import styles from "../styles/main.module.scss";
         <title>Education | Workexperience</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-    <div className={ styles.container }>
+    <div className={ styles.education__container }>
       <div className={styles.height}>
-        <main className={styles.text_color}>
+        <main>
           
         </main>
       </div>
