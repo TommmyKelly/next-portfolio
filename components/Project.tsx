@@ -2,11 +2,11 @@ import React from "react";
 import styles from "../styles/main.module.scss";
 import Link from "next/link";
 
-interface Props {
+export interface Props {
   project: {
     id: number;
     title: string;
-    excerpt: string;
+    excerpt?: string;
   };
 }
 
